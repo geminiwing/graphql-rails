@@ -8,3 +8,6 @@ Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: true
   EnforcedStyle: no_space
   EnforcedStyleForEmptyBrackets: no_space
+
+Style/StringLiterals:
+  Enabled: false

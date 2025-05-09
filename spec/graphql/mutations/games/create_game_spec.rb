@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Mutations::CreateGame do
+RSpec.describe Mutations::Games::CreateGame do
   subject(:graphql!) do
     GraphqlRailsSchema.execute(
       query_string,

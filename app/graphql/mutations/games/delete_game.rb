@@ -1,7 +1,7 @@
-class Mutations::DeleteGame < Mutations::BaseMutation
+class Mutations::Games::DeleteGame < Mutations::BaseMutation
   argument :id, ID, required: true
 
-  field :game, Types::GameType
+  field :game, Types::Games::GameType
   field :errors, [String]
 
   def resolve(id:)
