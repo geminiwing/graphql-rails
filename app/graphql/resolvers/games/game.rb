@@ -1,7 +1,7 @@
 module Resolvers
   module Games
     class Game < Resolvers::BaseResolver
-      type Types::GameType, null: false
+      type Types::Games::GameType, null: true
       description 'Returns the game for the id'
 
       argument :id, ID, required: true

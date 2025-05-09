@@ -1,7 +1,7 @@
-class Mutations::CreateGame < Mutations::BaseMutation
-  argument :attributes, Types::GameInputType, required: true
+class Mutations::Games::CreateGame < Mutations::BaseMutation
+  argument :attributes, Types::Games::GameInputType, required: true
 
-  field :game, Types::GameType
+  field :game, Types::Games::GameType
   field :errors, [String]
 
   def resolve(attributes:)

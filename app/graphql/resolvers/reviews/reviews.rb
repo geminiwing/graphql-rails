@@ -1,7 +1,7 @@
 module Resolvers
   module Reviews
     class Reviews < Resolvers::BaseResolver
-      type [Types::ReviewType], null: false
+      type [Types::Reviews::ReviewType], null: false
       description 'returns all reviews'
 
       def resolve

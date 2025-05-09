@@ -2,7 +2,7 @@
 
 module Types
   class MutationType < Types::BaseObject
-    field :create_game, mutation: Mutations::CreateGame
-    field :delete_game, mutation: Mutations::DeleteGame
+    field :create_game, mutation: Mutations::Games::CreateGame
+    field :delete_game, mutation: Mutations::Games::DeleteGame
   end
 end

@@ -1,7 +1,7 @@
 module Resolvers
   module Platforms
     class Platform < Resolvers::BaseResolver
-      type Types::PlatformType, null: false
+      type Types::Platforms::PlatformType, null: true
       description 'Returns the game for the id'
 
       argument :id, ID, required: true

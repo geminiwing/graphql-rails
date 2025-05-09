@@ -1,7 +1,7 @@
 module Resolvers
   module Reviews
     class Review < Resolvers::BaseResolver
-      type Types::ReviewType, null: false
+      type Types::Reviews::ReviewType, null: true
       description 'returns a review for the id'
 
       def resolve(id:)

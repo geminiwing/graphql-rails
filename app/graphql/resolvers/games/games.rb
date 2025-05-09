@@ -1,7 +1,7 @@
 module Resolvers
   module Games
     class Games < Resolvers::BaseResolver
-      type [Types::GameType], null: false
+      type [Types::Games::GameType], null: false
       description 'Returns all games'
 
       def resolve

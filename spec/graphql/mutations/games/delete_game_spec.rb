@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Mutations::DeleteGame do
+RSpec.describe Mutations::Games::DeleteGame do
   subject do
     GraphqlRailsSchema.execute(
       query_string,
