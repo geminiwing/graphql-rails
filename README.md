@@ -23,9 +23,8 @@ $ rails server
 GraphiQL is an in-browser GraphQL user interface. Type `localhost:3000/graphiql` in your browser to open the Graphiql UI.
 
 ### Testing Queries
-To fetch all games, type the following query in the query section of the Graphiql.
+To fetch all games, type the following query in the query section of GraphiQL UI.
 
-Operation
 ```graphql
 query Games {
   games {
@@ -38,8 +37,6 @@ query Games {
 ```
 
 To fetch a specific game, the query takes a game id.
-
-Operation
 ```graphql
 query Game($id: ID!) {
   game(id: $id) {
@@ -58,9 +55,9 @@ Variables
 ```
 
 ### Testing Mutations
-#### To create a  game
+#### To add a new game
+The mutation query wraps all input arguments inside a single `input` key. This is because the `CreateGame`'s base class `BaseMutation` inherits from `RelayClassicMutation`. Relay-style mutations accept only one argument.
 
-Operation
 ```graphql
 mutation CreateGame($attributes: GameInput!) {
   createGame(input: {
@@ -89,6 +86,7 @@ Variables
 ```
 
 #### To delete a game
+Although the `DeleteGame` mutation takes only one `id` argument, it is still wrapped inside `input`.
 ```graphql
 mutation DeleteGame($id: ID!){
   deleteGame(
